@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#F5F5F5">
+
+    <!-- Заголовок -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🏧 ATM Key Manager"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#1A237E"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Загрузите файл 1.txt для поиска"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Кнопка загрузки файла -->
+    <Button
+        android:id="@+id/loadButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📁 ВЫБРАТЬ ФАЙЛ 1.TXT"
+        android:textSize="16sp"
+        android:padding="15dp"
+        android:backgroundTint="#2E7D32"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Поле для ввода номера -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Поиск по номеру ATM:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="10dp" />
+
+    <EditText
+        android:id="@+id/searchInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Например: 74, 11, 258"
+        android:inputType="number"
+        android:padding="15dp"
+        android:background="@android:drawable/editbox_background"
+        android:layout_marginBottom="15dp" />
+
+    <!-- Кнопка поиска -->
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🔍 НАЙТИ"
+        android:textSize="16sp"
+        android:padding="15dp"
+        android:backgroundTint="#1565C0"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Результат поиска -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Результат:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="10dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="15dp"
+            android:text="Здесь будет результат поиска..."
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:textColor="#000000"
+            android:lineSpacingExtra="4dp" />
+    </ScrollView>
+
+    <!-- Подсказка -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="💡 Используйте тестовые данные или загрузите свой файл"
+        android:textSize="12sp"
+        android:textColor="#666666"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>
